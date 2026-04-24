@@ -1,3 +1,4 @@
+package org.example;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DynamicTest;
@@ -7,6 +8,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Stream;
+import org.example.Gradebook;
 
 /*
 W testach w pierwszej kolejności zamieniłem BeforAll na BeforeEach. Obiekt był tworzony tylko raz
