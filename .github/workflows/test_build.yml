@@ -13,10 +13,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Set up Java
+      - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
-          java-version: '21'
+          java-version: '17'
           distribution: 'temurin'
 
       - name: Run application (dry run)
@@ -25,11 +25,11 @@ jobs:
       - name: Run unit tests
         run: mvn test
 
-      - name: Package application (JAR)
+      - name: Build JAR
         run: mvn package -DskipTests
 
       - name: Upload JAR artifact
         uses: actions/upload-artifact@v4
         with:
-          name: app-jar
+          name: aplikacja-jar
           path: target/*.jar
