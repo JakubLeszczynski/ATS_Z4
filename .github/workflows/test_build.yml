@@ -20,7 +20,7 @@ jobs:
           distribution: 'temurin'
 
       - name: Run application (dry run)
-        run: mvn exec:java
+        run: mvn compile exec:java
 
       - name: Run unit tests
         run: mvn test
